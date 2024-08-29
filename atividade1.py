@@ -1,14 +1,8 @@
-#Crie uma função em python que leia o arquivo SecLists/Passwords/darkweb2017-top100.txt
-# e exiba na tela as 10 primeiras senhas do arquivo.
+# Função para ler e exibir as 10 primeiras senhas do arquivo
+def exibir_senhas():
+    with open('SecLists/Passwords/darkweb2017-top100.txt', 'r') as arquivo:
+        senhas = arquivo.readlines()
+        for senha in senhas[:10]:
+            print(senha.strip())
 
-def ler_arquivo():
-    with open("darkweb2017-top100.txt", "r") as arq:
-        for i in range (0,10):
-            conteudo = arq.readline()
-            print(conteudo)
-
-ler_arquivo()
-
-
-
-
+exibir_senhas()
